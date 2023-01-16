@@ -23,11 +23,6 @@ locals {
   storage_account = {
     primary_blob_endpoint = ""
   }
-  
-  private_ip_address = {
-    watch   = "172.19.216.114"
-    service = "172.19.224.114"
-  }
 
   zone     = "1"
   vmname   = ""
