@@ -12,9 +12,6 @@ provider "azurerm" {
 }
 
 ##### 環境変数 #####
-variable "application" {}
-variable "zone" {}
-variable "enable_accelerated_networking" {}
 variable "private_ip_address" {}
 
 locals {
@@ -27,9 +24,10 @@ locals {
     primary_blob_endpoint = var.primary_blob_endpoint
   }
 
+  zone     = "1"
+  vmname   = ""
   image_id = ""
-
-  vmname = ""
+  enable_accelerated_networking = false
 
   # az network vnet subnet list --resource-group common-rg-east --vnet-name common-vnet
   subnet_watch_id = ""
